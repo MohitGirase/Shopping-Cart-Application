@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeShop | Profile</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Profile Page Styles -->
+    <link rel="stylesheet" href="styles/profile-styles.css">
+</head>
+
+<body>
+    <div id="page-content">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a href="shop.html" class="logo">MeShop.</a>
+
+                    <ul class="nav-links">
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="nav-icon-btn" title="My Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-badge" class="cart-badge">0</span>
+                        </a>
+
+                        <a href="profile.html" class="nav-icon-btn" title="Profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Signup Section -->
+        <section class="auth-section">
+            <div class="container form-container">
+                <div class="auth-container" id="change-username-form-container">
+                    <h1 class="auth-title">My Profile</h1>
+
+                    <form class="auth-form" id="change-username-form" novalidate>
+                        <div class="form-group" id="firstName-container">
+                            <input type="text" id="firstName" placeholder="First Name" class="form-input" required>
+                            <p class="alert" id="firstName-alert">Required.</p>
+                        </div>
+
+                        <div class="form-group" id="lastName-container">
+                            <input type="text" id="lastName" placeholder="Last Name" class="form-input" required>
+                            <p class="alert" id="lastName-alert">Required.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="saveName-btn">Save Info</button>
+                    </form>
+                </div>
+                <div class="auth-container" id="edit-password-form-container">
+                    <h1 class="auth-title">Edit Password</h1>
+
+                    <form class="auth-form" id="edit-password-form" novalidate>
+                        <div class="form-group" id="oldPassword-container">
+                            <input type="password" id="oldPassword" placeholder="Old Password" class="form-input"
+                                required>
+                            <i class="fa fa-eye togglePassword" id="toggleOldPassword"></i>
+                            <p class="alert" id="oldPassword-alert">Please enter current password.</p>
+                        </div>
+
+                        <div class="form-group" id="newPassword-container">
+                            <input type="password" id="newPassword" placeholder="New Password" class="form-input"
+                                required>
+                            <i class="fa fa-eye togglePassword" id="toggleNewPassword"></i>
+                            <p class="alert" id="newPassword-alert">Password must be at least 8 characters long. It must include a mix of uppercase and lowercase letters, numbers, and symbols.</p>
+                        </div>
+
+                        <div class="form-group" id="confirmPassword-container">
+                            <input type="password" id="confirmPassword" placeholder="Confirm Password"
+                                class="form-input" required>
+                            <i class="fa fa-eye togglePassword" id="toggleConfirmPassword"></i>
+                            <p class="alert" id="confirmPassword-alert">Please enter password to update.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+                    </form>
+                </div>
+                <div class="auth-container" id="logout-form-container">
+                    <form class="auth-form" id="logout-form">
+                        <button type="submit" class="btn btn-primary btn-block" id="logout-btn">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="unauthorize" id="unauthorize">
+            <div class="unauthorize-box">
+                <div class="unauthorize-header">
+                    <i class="fa-solid fa-lock" id="unauthorize-lock"></i>
+                    <h1 class="unauthorize-title">Login/Signup Required</h1>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary btn-large">Login</a>
+                    <a href="signup.html" class="btn btn-outline btn-large">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="scripts/profile-script.js"></script>
+</body>
+
+</html>

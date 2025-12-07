@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeShop | Shop</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Profile Page Styles -->
+    <link rel="stylesheet" href="styles/shop-styles.css">
+</head>
+
+<body>
+    <div id="page-content">
+        <!-- Header -->
+        <header>
+            <div class="container navbar-container">
+                <nav class="navbar">
+                    <a href="shop.html" class="logo">MeShop.</a>
+
+                    <ul class="nav-links">
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="nav-icon-btn" title="My Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-badge" class="cart-badge">0</span>
+                        </a>
+
+                        <a href="profile.html" class="nav-icon-btn" title="Profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main class="container shop-main-layout">
+
+            <aside class="filter-sidebar">
+
+                <!-- Clothing Filters -->
+                <div class="filter-section" id="filter-clothing">
+                    <div class="filter-group">
+                        <h3>Colors</h3>
+                        <div class="filter-option"><input type="checkbox" data-color="red"> Red</div>
+                        <div class="filter-option"><input type="checkbox" data-color="blue"> Blue</div>
+                        <div class="filter-option"><input type="checkbox" data-color="green"> Green</div>
+                        <div class="filter-option"><input type="checkbox" data-color="black"> Black</div>
+                        <div class="filter-option"><input type="checkbox" data-color="white"> White</div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Sizes</h3>
+                        <div class="filter-option"><input type="checkbox" data-size="XS"> XS</div>
+                        <div class="filter-option"><input type="checkbox" data-size="S"> S</div>
+                        <div class="filter-option"><input type="checkbox" data-size="M"> M</div>
+                        <div class="filter-option"><input type="checkbox" data-size="L"> L</div>
+                        <div class="filter-option"><input type="checkbox" data-size="XL"> XL</div>
+                        <div class="filter-option"><input type="checkbox" data-size="XXL"> XXL</div>
+                    </div>
+                </div>
+
+                <!-- Jewellery Filters -->
+                <div class="filter-section" id="filter-jewellery">
+                    <div class="filter-group">
+                        <h3>Material Type</h3>
+                        <div class="filter-option"><input type="checkbox" data-material="Gold"> Gold</div>
+                        <div class="filter-option"><input type="checkbox" data-material="Silver"> Silver</div>
+                        <div class="filter-option"><input type="checkbox" data-material="Diamond"> Diamond</div>
+                        <div class="filter-option"><input type="checkbox" data-material="Platinum"> Platinum</div>
+                        <div class="filter-option"><input type="checkbox" data-material="Emerald"> Emerald</div>
+                        <div class="filter-option"><input type="checkbox" data-material="Pearl"> Pearl</div>
+                    </div>
+                </div>
+
+                <!-- Electronics Filters -->
+                <div class="filter-section" id="filter-electronics">
+                    <div class="filter-group">
+                        <h3>Electronics - Colors</h3>
+                        <div class="filter-option"><input type="checkbox" data-color="black"> Black</div>
+                        <div class="filter-option"><input type="checkbox" data-color="white"> White</div>
+                        <div class="filter-option"><input type="checkbox" data-color="grey"> Grey</div>
+                        <div class="filter-option"><input type="checkbox" data-color="silver"> Silver</div>
+                    </div>
+                </div>
+
+                <!-- Shared Filters (Common for all) -->
+                <div class="filter-group">
+                    <h3>Rating</h3>
+                    <input type="range" min="0" max="5" step="0.5" class="range-slider" value="0">
+                    <div class="range-labels"><span>0</span><span>5</span></div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="filter-option"><input type="checkbox" data-price="0-25"> $0 - $25</div>
+                    <div class="filter-option"><input type="checkbox" data-price="25-50"> $25 - $50</div>
+                    <div class="filter-option"><input type="checkbox" data-price="50-100"> $50 - $100</div>
+                    <div class="filter-option"><input type="checkbox" data-price="100+"> $100+</div>
+                </div>
+
+                <button id="filter-toggle-close-btn" class="filter-toggle-btn tab-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </aside>
+
+            <section class="shop-content">
+
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="search-input" type="text" placeholder="Search">
+                </div>
+
+                <div class="category-tabs">
+                    <button id="filter-toggle-open-btn" class="filter-toggle-btn tab-btn">
+                        <i class="fa-solid fa-sliders"></i>
+                    </button>
+                    <button class="tab-btn active" id="all-category-btn">All</button>
+                    <button class="tab-btn" id="mens-category-btn">Mens</button>
+                    <button class="tab-btn" id="womens-category-btn">Womens</button>
+                    <button class="tab-btn" id="jewellery-category-btn">Jewellery</button>
+                    <button class="tab-btn" id="electronics-category-btn">Electronics</button>
+
+                </div>
+
+                <div class="category-content" id="mens-category">
+                    <h2 class="section-title" id="mens-section-title">Men's Clothing</h2>
+
+                    <div class="product-grid" id="mens-product-grid">
+
+                    </div>
+                </div>
+
+                <div class="category-content" id="womens-category">
+                    <h2 class="section-title" id="womens-section-title">Women's Clothing</h2>
+
+                    <div class="product-grid" id="womens-product-grid">
+
+                    </div>
+                </div>
+
+                <div class="category-content" id="jewellery-category">
+                    <h2 class="section-title" id="jewellery-section-title">Jewellery</h2>
+
+                    <div class="product-grid" id="jewellery-product-grid">
+
+                    </div>
+                </div>
+
+                <div class="category-content" id="electronics-category">
+                    <h2 class="section-title" id="electronics-section-title">Electronics</h2>
+
+                    <div class="product-grid" id="electronics-product-grid">
+
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <div class="unauthorize" id="unauthorize" style="display: none">
+            <div class="unauthorize-box">
+                <div class="unauthorize-header">
+                    <i class="fa-solid fa-lock" id="unauthorize-lock"></i>
+                    <h1 class="unauthorize-title">Login/Signup Required</h1>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary btn-large">Login</a>
+                    <a href="signup.html" class="btn btn-outline btn-large">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <!-- Script -->
+    <script src="scripts/shop-script.js"></script>
+</body>
+
+</html>

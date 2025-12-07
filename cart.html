@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeShop | Cart</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Profile Page Styles -->
+    <link rel="stylesheet" href="styles/cart-styles.css">
+</head>
+
+<body>
+    <div id="page-content">
+        <!-- Header -->
+        <header>
+            <div class="container navbar-container">
+                <nav class="navbar">
+                    <a href="shop.html" class="logo">MeShop.</a>
+
+                    <ul class="nav-links">
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <a href="cart.html" class="nav-icon-btn" title="My Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-badge" class="cart-badge">0</span>
+                        </a>
+
+                        <a href="profile.html" class="nav-icon-btn" title="Profile">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="cart-main-layout">
+            <h1 class="cart-header">My Cart</h1>
+            <main class="container cart-section">
+                <div class="cart-content">
+                    <div class="empty-cart" id="empty-cart">
+                        <div class="empty-cart-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/102/102661.png" alt="Empty Cart"
+                                class="empty-cart-icon">
+
+                            <h2>Your Cart is Empty</h2>
+
+                            <p class="empty-cart-text">
+                                Looks like you haven’t added anything yet. Explore our collections and find something
+                                you’ll love.
+                            </p>
+
+                            <a href="shop.html" class="empty-cart-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="cart-actions" id="cart-actions">
+                        <button id="select-all-btn" class="btn btn-outline">Select All</button>
+                        <button id="remove-selected-btn" class="btn btn-primary">Remove Selected</button>
+                    </div>
+
+                    <div class="product-grid" id="product-grid">
+
+                        <!-- Product cards will go here -->
+
+                    </div>
+                </div>
+                <aside class="checkout-sidebar">
+                    <h2 class="checkout-title">Checkout List</h2>
+
+                    <ul class="checkout-items">
+                        <li>
+                            <span>1. Shirt</span>
+                            <span>$100</span>
+                        </li>
+                        <li>
+                            <span>1. Shirt</span>
+                            <span>$100</span>
+                        </li>
+                        <li>
+                            <span>1. Shirt</span>
+                            <span>$100</span>
+                        </li>
+                    </ul>
+
+                    <div class="checkout-total">
+                        <span>Total</span>
+                        <span>Rs 900/-</span>
+                    </div>
+
+                    <button class="checkout-btn">Click To Checkout</button>
+                </aside>
+            </main>
+        </section>
+
+        <div class="unauthorize" id="unauthorize" style="display: none">
+            <div class="unauthorize-box">
+                <div class="unauthorize-header">
+                    <i class="fa-solid fa-lock" id="unauthorize-lock"></i>
+                    <h1 class="unauthorize-title">Login/Signup Required</h1>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary btn-large">Login</a>
+                    <a href="signup.html" class="btn btn-outline btn-large">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="toast" class="toast"></div>
+    </div>
+    <!-- Script -->
+    <script src="scripts/cart-script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+
+</html>

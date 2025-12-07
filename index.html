@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeShop | Home</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <a href="index.html" class="logo">MeShop.</a>
+
+                <!-- Desktop Nav (Hidden on Mobile) -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <!-- Icons & Actions -->
+                <div class="nav-actions">
+                    <!-- Auth Links (Visible on Desktop) -->
+                    <div class="auth-buttons">
+                        <a href="login.html" class="auth-link">Login</a>
+                        <a href="signup.html" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">Sign Up</a>
+                    </div>
+
+                    <!-- Cart -->
+                    <a href="cart.html" class="nav-icon-btn" title="My Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    
+                    <!-- Profile -->
+                    <a href="profile.html" class="nav-icon-btn" title="Profile">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                    
+                    <!-- Mobile Menu Icon -->
+                    <div class="mobile-menu-toggle" id="mobile-menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>MeShop. <br><span style="font-size: 0.6em; font-weight: 500; color: var(--text-light);">Your Premium Shopping Hub</span></h1>
+                    <p>Discover the latest trends in fashion and electronics. Join us today to start your journey with the best products delivered to your doorstep.</p>
+                    <div class="hero-buttons">
+                        <a href="login.html" class="btn btn-primary btn-large">Login</a>
+                        <a href="signup.html" class="btn btn-outline btn-large">Sign Up</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Abstract Illustration (SVG) -->
+                    <svg class="hero-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="250" cy="250" r="200" fill="#f3f4f6" />
+                        <rect x="150" y="150" width="200" height="200" rx="20" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+                        <!-- Simple "Browser" header -->
+                        <rect x="150" y="150" width="200" height="40" rx="20" fill="#1f2937" />
+                        <circle cx="170" cy="170" r="5" fill="#ef4444" />
+                        <circle cx="185" cy="170" r="5" fill="#eab308" />
+                        <circle cx="200" cy="170" r="5" fill="#22c55e" />
+                        <!-- Content -->
+                        <rect x="170" y="210" width="70" height="80" rx="4" fill="#e5e7eb" />
+                        <rect x="260" y="210" width="70" height="80" rx="4" fill="#e5e7eb" />
+                        <rect x="170" y="300" width="70" height="30" rx="4" fill="#e5e7eb" />
+                        <rect x="260" y="300" width="70" height="30" rx="4" fill="#e5e7eb" />
+                        <!-- Person/Shopper Graphic simplified -->
+                        <circle cx="100" cy="400" r="60" fill="#4F46E5" opacity="0.8" />
+                        <rect x="350" y="350" width="100" height="100" rx="10" fill="#111827" transform="rotate(15 400 400)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="toast" class="toast"></div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
